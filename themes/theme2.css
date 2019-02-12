@@ -1,0 +1,45 @@
+/*
+ * Implementation of themes
+ */
+.theme-zeta #box1 {
+  background-color: #633ea5;
+  border: 3px solid #633ea5; }
+.theme-phillipiens #box1 {
+  background-color: #2a295c;
+  border: 3px solid #2a295c; }
+
+.theme-zeta #box2 {
+  background-color: #ffbc00;
+  border: 3px solid #ffbc00; }
+.theme-phillipiens #box2 {
+  background-color: #2a295c;
+  border: 3px solid #2a295c; }
+
+.theme-zeta #box3 {
+  background-color: #8655df;
+  border: 3px solid #8655df; }
+.theme-phillipiens #box3 {
+  background-color: #3cdcc8;
+  border: 3px solid #3cdcc8; }
+
+.theme-zeta #box4 {
+  background-color: #000000;
+  border: 3px solid #000000; }
+.theme-phillipiens #box4 {
+  background-color: #000000;
+  border: 3px solid #000000; }
+
+h2 {
+  color: green; }
+
+.header {
+  margin: 50px auto; }
+
+.box {
+  height: 150px; }
+  .box .box-color {
+    background: #444;
+    padding: 10px;
+    height: 100%; }
+
+/*# sourceMappingURL=theme2.css.map */

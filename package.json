@@ -1,0 +1,20 @@
+{
+  "name": "theming-op1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html --out-dir prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.17.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

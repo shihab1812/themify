@@ -1,0 +1,71 @@
+$themes: (
+  zeta       : (primary : #633ea5, secondary : #ffbc00, accent : #8655df, textBlack : #000000),
+  phillipiens: (primary : #2a295c, secondary : #2a295c, accent : #3cdcc8, textBlack : #000000)
+);
+/*
+ * Implementation of themes
+ */
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: ()
+      !global;
+      @each $key, $submap in $map {
+        $value    : map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+// APP specific
+#box1 {
+  @include themify($themes) {
+    background-color: themed('primary');
+    border          : 3px solid themed('primary');
+  }
+}
+
+#box2 {
+  @include themify($themes) {
+    background-color: themed('secondary');
+    border          : 3px solid themed('secondary');
+  }
+}
+
+#box3 {
+  @include themify($themes) {
+    background-color: themed('accent');
+    border          : 3px solid themed('accent');
+  }
+}
+
+#box4 {
+  @include themify($themes) {
+    background-color: themed('textBlack');
+    border          : 3px solid themed('textBlack');
+  }
+}
+$test: green;
+
+h2 {
+  color: $test;
+}
+
+.header {
+  margin: 50px auto;
+}
+
+.box {
+  height: 150px;
+
+  .box-color {
+    background: #444;
+    padding   : 10px;
+    height    : 100%;
+  }
+}
